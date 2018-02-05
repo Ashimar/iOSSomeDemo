@@ -47,7 +47,7 @@
 - (void)drawButton {
     CGFloat buttonWidth = Screen_Width/8;
     UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    stopButton.frame = CGRectMake(0, 0, buttonWidth, buttonWidth);
+    stopButton.frame = CGRectMake(100, 200, buttonWidth, buttonWidth);
     stopButton.backgroundColor = [UIColor orangeColor];
     [stopButton setTitle:@"停止" forState:0];
     [stopButton setTitleColor:[UIColor whiteColor] forState:0];
@@ -58,7 +58,7 @@
     stopButton.layer.borderWidth = 10;
     [self.view addSubview:stopButton];
     
-    stopButton.center = self.view.center;
+//    stopButton.center = self.view.center;
     [stopButton addTarget:self action:@selector(stopButtonDidTouch:) forControlEvents:UIControlEventTouchUpInside];
     [self.view bringSubviewToFront:stopButton];
 }
@@ -83,10 +83,10 @@
         [self drawButton];
         return;
     }
-    if (num == 13) {
-        num++;
-        return;
-    }
+//    if (num == 13) {
+//        num++;
+//        return;
+//    }
     int j = num-1;
     int i = 0;
     while (j >= 5) {
